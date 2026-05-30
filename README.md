@@ -6,6 +6,13 @@ To bridge this gap, this project focuses on hardware-efficient architectural opt
 
 Our optimized model delivers an optimal balance between latency, model size, and accuracy directly on edge computing hardware.
 
+
+## Download Dataset
+Hugging Face: PDT dataset v2 (Improve the quality 2024.10.4)
+
+## Code
+GitHub: https://github.com/hoangthh810/Lightweight-YOLO-DP
+
 ## References
 
 This project is built upon and improves the baseline architecture proposed in the following paper:
