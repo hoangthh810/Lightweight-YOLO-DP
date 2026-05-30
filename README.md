@@ -13,12 +13,3 @@ This project is built upon and improves the baseline architecture proposed in th
 * **Paper Title:** PDT: Uav Target Detection Dataset for Pests and Diseases Tree
 * **Authors:** Mingle Zhou, Rui Xing, Delong Han, Zhiyong Qi, Gang Li
 * **Preprint:** [arXiv:2409.15679](https://arxiv.org/pdf/2409.15679)
-
-```bibtex
-@article{zhou2024pdt,
-  title={PDT: Uav Target Detection Dataset for Pests and Diseases Tree},
-  author={Zhou, Mingle and Xing, Rui and Han, Delong and Qi, Zhiyong and Li, Gang},
-  journal={arXiv preprint arXiv:2409.15679},
-  year={2024},
-  url={[https://arxiv.org/pdf/2409.15679](https://arxiv.org/pdf/2409.15679)}
-}
