@@ -8,10 +8,12 @@ Our optimized model delivers an optimal balance between latency, model size, and
 
 
 ## Download Dataset
-Hugging Face: PDT dataset v2 (Improve the quality 2024.10.4)
+
+**Hugging Face:** [PDT dataset v2 (Improve the quality 2024.10.4)](https://huggingface.co/)
 
 ## Code
-GitHub: https://github.com/hoangthh810/Lightweight-YOLO-DP
+
+**GitHub:** [YOLO-DP-Tiny](https://github.com/hoangthh810/Lightweight-YOLO-DP)
 
 ## References
 
