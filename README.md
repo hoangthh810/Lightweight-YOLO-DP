@@ -36,6 +36,13 @@ Our optimized model delivers an optimal balance between latency, model size, and
 | | | Val | 395 | 172 | $640 \times 640$ | 12523 | 9926 2165 432 |
 | | | Test | 390 | 177 | $640 \times 640$ | 11494 | 8949 2095 450 |
 | **LH** | unhealthy | - | 105 | 0 | $5472 \times 3648$ | 93474 | 93474 0 0 |
+
+## Models
+
+### Network Structure
+
+![Network Structure](img/model.png)
+
 ## References
 
 This project is built upon and improves the baseline architecture proposed in the following paper:
