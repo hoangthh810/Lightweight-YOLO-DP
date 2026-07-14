@@ -1,6 +1,7 @@
 ## Abstract
 
 Autonomous UAV-based plant protection operations require high-precision object detection models that can effectively identify dense, small-scale targets such as agricultural pests, diseases, and weeds in real-time. While the advanced YOLO-DP baseline (proposed in *"PDT: Uav Target Detection Dataset for Pests and Diseases Tree"*) achieves outstanding accuracy, its high computational complexity poses significant challenges for deployment on resource-constrained edge devices like NVIDIA Jetson or Raspberry Pi.
+Update target hardware
 
 Our optimized model delivers an optimal balance between latency, model size, and accuracy directly on edge computing hardware.
 
