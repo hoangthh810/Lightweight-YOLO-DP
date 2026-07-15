@@ -107,6 +107,82 @@ The quantized models were evaluated on a test set containing 567 images and 11,5
 | YOLO-RELAN-SCDown | QDQ | 0.8980 | 0.8147 | 0.8737 | **0.5932** |
 | YOLO-RELAN-SCDown | QOperator | **0.8987** | 0.8153 | 0.8740 | 0.5931 |
 
+## Qualitative Results
+
+To qualitatively evaluate the optimized model, the final
+**YOLO-UIBLite-Lowrank INT8 QOperator** model was deployed on the
+Raspberry Pi 4 and tested using images from the PDT (LL) test set.
+
+The visualization uses the following bounding-box convention:
+
+- **Green:** True Positive (TP)
+- **Red:** False Positive (FP)
+- **Blue:** Missed Ground Truth (MISS)
+
+### Case 1: Dense Pest Distribution
+
+This case evaluates the model under a challenging scenario containing
+a high density of infected regions. Multiple targets appear close to
+one another, making localization more difficult and increasing the
+possibility of overlapping detections.
+
+| Original Image | Prediction vs. Ground Truth |
+|:---:|:---:|
+| <img src="img/case1_dense_original.jpg" width="420"> | <img src="img/case1_dense_result.jpg" width="420"> |
+
+**Detection summary:** `TP: 13`, `FP: 4`, `MISS: 4`
+
+The model successfully detected most infected regions despite the high
+target density. However, several false positives and missed objects
+remained, indicating that densely distributed and partially overlapping
+targets are still challenging for the lightweight INT8 model.
+
+---
+
+### Case 2: Sparse Pest Distribution
+
+This case contains only a small number of infected regions distributed
+across the UAV image. The targets are spatially separated and have
+relatively clear visual boundaries.
+
+| Original Image | Prediction vs. Ground Truth |
+|:---:|:---:|
+| <img src="img/case2_sparse_original.jpg" width="420"> | <img src="img/case2_sparse_result.jpg" width="420"> |
+
+**Detection summary:** `TP: 3`, `FP: 0`, `MISS: 0`
+
+All ground-truth objects were correctly detected without false positives
+or missed detections. This result demonstrates that the model performs
+reliably when infected regions are sparse and visually distinguishable
+from the surrounding vegetation.
+
+---
+
+### Case 3: No Pest or Disease Present
+
+This negative case evaluates whether the model incorrectly generates
+detections when no infected region is present in the image.
+
+| Original Image | Model Output |
+|:---:|:---:|
+| <img src="img/case3_no_pest_original.jpg" width="420"> | <img src="img/case3_no_pest_result.jpg" width="420"> |
+
+**Detection summary:** `TP: 0`, `FP: 0`, `MISS: 0`
+
+The model produced no bounding boxes for this image, correctly identifying
+the scene as containing no visible pest or disease regions. This result is
+important for practical deployment because it demonstrates the model's
+ability to avoid unnecessary false alarms in healthy forest areas.
+
+### Overall Observation
+
+The qualitative results show that the deployed model performs well in
+sparse-target and negative-image scenarios. Its main limitations appear
+in dense scenes, where small, overlapping, or visually ambiguous targets
+may lead to false positives and missed detections. Nevertheless, the
+model maintains a practical balance between detection quality and
+computational efficiency for low-frame-rate UAV monitoring on the
+Raspberry Pi 4.
 
 
 ## References
