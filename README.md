@@ -184,7 +184,12 @@ model maintains a practical balance between detection quality and
 computational efficiency for low-frame-rate UAV monitoring on the
 Raspberry Pi 4.
 
-
+### Training Convergence
+<p align="center">
+  <img src="img/training_curves_uiblite_lowrank.png"
+       alt="Training curves of YOLO-UIBLite-Lowrank"
+       width="900">
+</p>
 ## References
 
 This project is built upon and improves the baseline architecture proposed in the following paper:
