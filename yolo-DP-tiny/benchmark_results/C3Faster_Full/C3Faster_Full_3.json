@@ -1,0 +1,25 @@
+{
+  "name": "C3Faster_Full_3",
+  "model_path": "E:\\Drone\\CWC\\CWC_Full_C3Faster\\CWC_Full_C3Faster\\runs_CWC\\CWC_C3Faster_Full\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\CWC dataset\\YOLO_txt\\test\\images\\bluegrass_(41).jpg",
+  "stats_ms": {
+    "mean": 5.489,
+    "std": 0.672,
+    "p50": 5.39,
+    "p95": 5.977,
+    "p99": 9.994,
+    "min": 4.951,
+    "max": 10.62
+  },
+  "fps": {
+    "mean": 182.2,
+    "p50": 185.5,
+    "p95": 167.3,
+    "p99": 100.1
+  }
+}

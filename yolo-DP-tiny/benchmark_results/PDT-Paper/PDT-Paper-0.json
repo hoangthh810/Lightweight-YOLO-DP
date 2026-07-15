@@ -1,0 +1,25 @@
+{
+  "name": "PDT-Paper-0",
+  "model_path": "E:\\Drone\\PDT\\PDT_PAPER\\PDT_PAPER\\runs_PDT\\PDT_Paper\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\PDT dataset\\LL\\YOLO_txt\\train\\images\\images_(1)_0000.jpg",
+  "stats_ms": {
+    "mean": 5.424,
+    "std": 0.826,
+    "p50": 5.253,
+    "p95": 6.253,
+    "p99": 10.48,
+    "min": 4.766,
+    "max": 11.032
+  },
+  "fps": {
+    "mean": 184.4,
+    "p50": 190.4,
+    "p95": 159.9,
+    "p99": 95.4
+  }
+}

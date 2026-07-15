@@ -1,0 +1,25 @@
+{
+  "name": "CWC-GhosConv-C2f-3",
+  "model_path": "E:\\Drone\\CWC\\CWC-C2f-GhostConv\\YOLO_Project\\runs_CWC\\CWC_GhostConv_C2f\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\CWC dataset\\YOLO_txt\\test\\images\\bluegrass_(41).jpg",
+  "stats_ms": {
+    "mean": 3.492,
+    "std": 0.395,
+    "p50": 3.436,
+    "p95": 3.755,
+    "p99": 4.924,
+    "min": 3.103,
+    "max": 7.165
+  },
+  "fps": {
+    "mean": 286.4,
+    "p50": 291.0,
+    "p95": 266.3,
+    "p99": 203.1
+  }
+}

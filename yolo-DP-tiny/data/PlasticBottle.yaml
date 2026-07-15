@@ -1,0 +1,7 @@
+path:  D:\Datasets\Plastic Bottles in the wild Image Dataset\Plastic Bottle Image Dataset
+train: train/images
+val:  valid/images
+test: test/images
+
+nc: 1
+names: ['bottle']

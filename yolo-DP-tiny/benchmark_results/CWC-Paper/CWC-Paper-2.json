@@ -1,0 +1,25 @@
+{
+  "name": "CWC-Paper-2",
+  "model_path": "E:\\Drone\\CWC\\CWC-PAPER-640\\CWC-PAPER-640\\runs_CWC\\CWC_Paper_640\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\CWC dataset\\YOLO_txt\\test\\images\\bluegrass_(41).jpg",
+  "stats_ms": {
+    "mean": 5.663,
+    "std": 0.837,
+    "p50": 5.48,
+    "p95": 6.919,
+    "p99": 10.418,
+    "min": 4.981,
+    "max": 10.923
+  },
+  "fps": {
+    "mean": 176.6,
+    "p50": 182.5,
+    "p95": 144.5,
+    "p99": 96.0
+  }
+}

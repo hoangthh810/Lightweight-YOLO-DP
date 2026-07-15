@@ -1,0 +1,25 @@
+{
+  "name": "CWC-LSK-Faster-3",
+  "model_path": "E:\\Drone\\CWC\\CWC_Faster_LSK\\YOLO_Project\\runs_CWC\\CWC_LSK_Faster\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\CWC dataset\\YOLO_txt\\test\\images\\bluegrass_(41).jpg",
+  "stats_ms": {
+    "mean": 5.862,
+    "std": 0.513,
+    "p50": 5.745,
+    "p95": 6.468,
+    "p99": 7.269,
+    "min": 5.385,
+    "max": 11.82
+  },
+  "fps": {
+    "mean": 170.6,
+    "p50": 174.1,
+    "p95": 154.6,
+    "p99": 137.6
+  }
+}

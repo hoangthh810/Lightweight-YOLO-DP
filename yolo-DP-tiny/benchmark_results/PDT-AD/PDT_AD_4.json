@@ -1,0 +1,25 @@
+{
+  "name": "PDT_AD_4",
+  "model_path": "E:\\Drone\\PDT\\PDT-AD\\PDT-AD\\runs_PDT\\PDT_GhostConv+LSK_C2f\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\PDT dataset\\LL\\YOLO_txt\\test\\images\\images_(1)_0007.jpg",
+  "stats_ms": {
+    "mean": 3.414,
+    "std": 0.364,
+    "p50": 3.357,
+    "p95": 3.762,
+    "p99": 4.941,
+    "min": 2.885,
+    "max": 6.786
+  },
+  "fps": {
+    "mean": 292.9,
+    "p50": 297.9,
+    "p95": 265.8,
+    "p99": 202.4
+  }
+}

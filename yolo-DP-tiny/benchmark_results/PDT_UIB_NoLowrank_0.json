@@ -1,0 +1,25 @@
+{
+  "name": "PDT_UIB_NoLowrank_0",
+  "model_path": "E:\\Drone\\PDT\\PDT_UIBLite_NoLowrank\\runs_PDT\\PDT_UIBLite_NoLowrank\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\PDT dataset\\LL\\YOLO_txt\\test\\images\\images_(1)_0007.jpg",
+  "stats_ms": {
+    "mean": 2.121,
+    "std": 0.3,
+    "p50": 1.987,
+    "p95": 2.766,
+    "p99": 3.323,
+    "min": 1.885,
+    "max": 3.802
+  },
+  "fps": {
+    "mean": 471.5,
+    "p50": 503.2,
+    "p95": 361.5,
+    "p99": 300.9
+  }
+}

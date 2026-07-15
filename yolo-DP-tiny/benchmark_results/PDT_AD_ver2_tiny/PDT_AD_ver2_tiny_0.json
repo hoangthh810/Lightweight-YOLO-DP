@@ -1,0 +1,25 @@
+{
+  "name": "PDT_AD_ver2_tiny_0",
+  "model_path": "E:\\Drone\\PDT\\PDT-K23-Tiny\\PDT-K23-Tiny\\runs_PDT\\PDT_K23_version_tiny\\weights\\best.pt",
+  "device": "cuda:0",
+  "half": true,
+  "img_size": 640,
+  "warmup_runs": 50,
+  "bench_runs": 500,
+  "image_used": "E:\\Drone\\PDT_CWC_YOLO-DP-main\\PDT dataset\\LL\\YOLO_txt\\test\\images\\images_(1)_0007.jpg",
+  "stats_ms": {
+    "mean": 4.94,
+    "std": 1.093,
+    "p50": 4.483,
+    "p95": 6.594,
+    "p99": 9.305,
+    "min": 4.064,
+    "max": 10.269
+  },
+  "fps": {
+    "mean": 202.4,
+    "p50": 223.1,
+    "p95": 151.7,
+    "p99": 107.5
+  }
+}
