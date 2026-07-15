@@ -190,6 +190,7 @@ Raspberry Pi 4.
        alt="Training curves of YOLO-UIBLite-Lowrank"
        width="900">
 </p>
+
 ## References
 
 This project is built upon and improves the baseline architecture proposed in the following paper:
