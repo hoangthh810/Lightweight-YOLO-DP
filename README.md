@@ -1,9 +1,6 @@
 ## Abstract
 
-Autonomous UAV-based plant protection operations require high-precision object detection models that can effectively identify dense, small-scale targets such as agricultural pests, diseases, and weeds in real-time. While the advanced YOLO-DP baseline (proposed in *"PDT: Uav Target Detection Dataset for Pests and Diseases Tree"*) achieves outstanding accuracy, its high computational complexity poses significant challenges for deployment on resource-constrained edge devices like NVIDIA Jetson or Raspberry Pi.
-Update target hardware
-
-Our optimized model delivers an optimal balance between latency, model size, and accuracy directly on edge computing hardware.
+This project presents a lightweight pest and disease detection model designed for deployment on resource-constrained edge devices, particularly the Raspberry Pi 4. The original YOLO-DP architecture was adapted for low-altitude UAV imagery using the PDT (LL) dataset. The optimization process includes removing the computationally expensive Large-Scale Selective Kernel module, pruning the P5 detection branch, simplifying the backbone, and integrating lightweight components such as SCDown, UIBLite, low-rank convolution, and ReLU6 activation. The optimized YOLO-UIBLite-LowRank model contains only 0.36 million parameters and requires 4.3 GFLOPs, reducing the parameter count by 94.1% and computational complexity by 66.4% compared with YOLO-DP-21, while maintaining an FP32 mAP@0.5 of 0.911. For edge deployment, the model was exported to ONNX and quantized to INT8 using the QOperator format. On a Raspberry Pi 4 Model B, the final model achieved an average processing time of 199 ms per image, equivalent to 5.03 FPS. It obtained a precision of 0.8617, recall of 0.8479, mAP@0.5 of 0.8816, and mAP@0.5:0.95 of 0.5513. These results demonstrate an effective balance between detection accuracy, computational efficiency, and practical edge deployment for UAV-based agricultural monitoring.
 
 
 ## Download Dataset
