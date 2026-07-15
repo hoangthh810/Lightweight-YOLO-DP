@@ -80,12 +80,6 @@ The following table compares the original YOLO-DP architectures and the proposed
 | **YOLO-UIBLite-Lowrank** | **85** | **0.36M** | **4.3** | **0.858** | **0.840** | **0.911** | **0.582** | **303** |
 | YOLO-UIBLite-NoLowrank | **76** | 0.69M | 5.9 | 0.873 | 0.840 | 0.919 | 0.596 | **312** |
 
-YOLO-DP-K23 achieved the highest detection accuracy, reaching an mAP@0.5 of 0.938. However, its 3.40 million parameters and 9.5 GFLOPs make it less suitable for CPU-only edge deployment.
-
-YOLO-UIBLite-NoLowrank achieved the highest GPU throughput at 312 FPS. Nevertheless, its larger intermediate feature representations resulted in higher latency when deployed on the Raspberry Pi 4.
-
-YOLO-UIBLite-Lowrank provided a more balanced architecture for edge deployment. Compared with YOLO-DP-21, it reduced the parameter count from 6.10M to 0.36M and the computational complexity from 12.8 to 4.3 GFLOPs. This corresponds to a 94.1% reduction in parameters and a 66.4% reduction in computational cost, while the FP32 mAP@0.5 decreased by only 2.3 percentage points.
-
 ### Raspberry Pi 4 Inference Performance
 
 Three lightweight models were exported to ONNX and quantized to INT8. Both QDQ and QOperator quantization formats were evaluated directly on the Raspberry Pi 4.
@@ -99,9 +93,6 @@ Three lightweight models were exported to ONNX and quantized to INT8. Both QDQ a
 | YOLO-UIBLite-NoLowrank | QDQ | 9.70 ms | 212.10 ms | 225.02 ms | 4.44 |
 | YOLO-UIBLite-NoLowrank | QOperator | 9.24 ms | 221.18 ms | 233.62 ms | 4.28 |
 
-Despite achieving the highest FPS on the RTX 4060, YOLO-UIBLite-NoLowrank was slower on the Raspberry Pi 4. This result demonstrates that GPU FPS and theoretical GFLOPs do not always reflect real performance on an ARM CPU, where memory access patterns and intermediate tensor sizes can become major bottlenecks.
-
-YOLO-UIBLite-Lowrank with QOperator achieved the highest Raspberry Pi throughput, processing each image in approximately 199 ms and reaching 5.03 FPS.
 
 ### INT8 Detection Accuracy
 
@@ -116,29 +107,6 @@ The quantized models were evaluated on a test set containing 567 images and 11,5
 | YOLO-RELAN-SCDown | QDQ | 0.8980 | 0.8147 | 0.8737 | **0.5932** |
 | YOLO-RELAN-SCDown | QOperator | **0.8987** | 0.8153 | 0.8740 | 0.5931 |
 
-QDQ and QOperator produced nearly identical accuracy for the same architecture. Their mAP differences were limited to the third or fourth decimal place, indicating that replacing QDQ nodes with direct integer operators did not significantly affect detection accuracy.
-
-The INT8 models experienced an mAP@0.5 reduction of approximately 3–5% compared with their FP32 versions. The UIBLite variants showed better quantization stability than YOLO-RELAN-SCDown, maintaining an mAP@0.5 above 0.88 after quantization.
-
-### Selected Deployment Model
-
-Based on the balance between model complexity, detection accuracy, and measured Raspberry Pi latency, **YOLO-UIBLite-Lowrank with INT8 QOperator quantization** was selected as the final deployment model.
-
-Its final performance is summarized below:
-
-| Metric | Result |
-|---|---:|
-| Parameters | 0.36M |
-| GFLOPs | 4.3 |
-| INT8 format | QOperator |
-| Precision | 0.8617 |
-| Recall | 0.8479 |
-| mAP@0.5 | 0.8816 |
-| mAP@0.5:0.95 | 0.5513 |
-| Total processing time | 199.00 ms/image |
-| Raspberry Pi 4 throughput | 5.03 FPS |
-
-These results indicate that the proposed model provides a practical trade-off between detection performance and computational efficiency for low-frame-rate UAV-based pest and disease monitoring on CPU-only edge devices.
 
 
 ## References
